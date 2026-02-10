@@ -46,4 +46,4 @@ public class Main {
         System.out.println("Общая сумма = " + totalSum);
         executor.shutdown();
     }
-}
+ }
