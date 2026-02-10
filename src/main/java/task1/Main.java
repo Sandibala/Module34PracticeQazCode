@@ -21,7 +21,6 @@ public class Main {
             }
             return sum;
         };
-
         Callable<Integer> task2 = () -> {
             int sum = 0;
             for (int i = partSize; i < 2 * partSize; i++) {
