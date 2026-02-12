@@ -10,9 +10,11 @@ public class Main {
     public static void main(String[] args) throws Exception {
         List<Integer> numbers = List.of(2,4,6,8,10,12,14,16);
 
-        int parts = 3;
-        ExecutorService executor = Executors.newFixedThreadPool(parts);
-        int partSize = numbers.size() / parts;
+        int cores = Runtime.getRuntime().availableProcessors();
+        System.out.println(cores);
+        ExecutorService executor = Executors.newFixedThreadPool(cores);
+        int partSize = numbers.size() / cores;
+        System.out.println(partSize);
 
         Callable<Integer> task1 = () -> {
             int sum = 0;
@@ -21,6 +23,7 @@ public class Main {
             }
             return sum;
         };
+
         Callable<Integer> task2 = () -> {
             int sum = 0;
             for (int i = partSize; i < 2 * partSize; i++) {
