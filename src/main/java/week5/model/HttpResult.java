@@ -1,4 +1,4 @@
-package week5.service;
+package week5.model;
 
 public class HttpResult {
     private final boolean succes;

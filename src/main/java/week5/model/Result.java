@@ -26,7 +26,7 @@ public class Result {
     @Override
     public  String toString() {
         return "Result {" +
-                " ucces = " + succesCount +
+                " succes = " + succesCount +
                 " error = " + errorCount +
                 " average = " + averageResponseTime + " }";
     }

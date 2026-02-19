@@ -1,7 +1,7 @@
 package week5.service;
 
 import week5.model.Result;
-import week5.service.HttpResult;
+import week5.model.HttpResult;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -28,7 +28,7 @@ public class AggregatorService {
         List<Callable<Void>> tasks = urls.stream()
                 .map(url -> (Callable<Void>) () -> {
 
-                  HttpResult result = httpClientService.sendGet(url);
+                    HttpResult result = httpClientService.sendGet(url);
 
                     if (result.isSuccess()) {
                         successCount.incrementAndGet();

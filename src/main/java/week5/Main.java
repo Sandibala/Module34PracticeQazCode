@@ -6,7 +6,6 @@ import week5.service.HttpClientService;
 
 import java.net.http.HttpClient;
 import java.util.List;
-import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class Main {

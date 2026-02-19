@@ -1,5 +1,7 @@
 package week5.service;
 
+import week5.model.HttpResult;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
